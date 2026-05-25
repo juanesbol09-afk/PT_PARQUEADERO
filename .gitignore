@@ -1,0 +1,22 @@
+# Angular
+node_modules/
+dist/
+.angular/
+.cache/
+
+# .NET
+bin/
+obj/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Environment
+.env
+
+# OS
+.DS_Store
+Thumbs.db
