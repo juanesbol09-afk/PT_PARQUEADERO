@@ -1,3 +1,5 @@
+import Swal from 'sweetalert2';
+
 import { Component, OnInit } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
@@ -23,6 +25,8 @@ export class App implements OnInit {
 
   vehiculos: any[] = [];
 
+  loading = false;
+
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
@@ -31,14 +35,17 @@ export class App implements OnInit {
 
   obtenerVehiculos() {
 
+    this.loading = true;
     this.http.get<any[]>(`${this.apiUrl}/activos`)
       .subscribe({
         next: (data) => {
           this.vehiculos = data;
+          this.loading = false;
         },
 
         error: (error) => {
           console.error(error);
+          this.loading = false;
         }
       });
 
@@ -55,7 +62,12 @@ export class App implements OnInit {
       .subscribe({
         next: () => {
 
-          alert('Vehículo registrado correctamente');
+          Swal.fire({
+            icon: 'success',
+            title: 'Éxito',
+            text: 'Vehículo registrado correctamente',
+            confirmButtonColor: '#198754'
+          });
 
           this.placa = '';
 
@@ -68,7 +80,12 @@ export class App implements OnInit {
 
           console.error(error);
 
-          alert('Error registrando vehículo');
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: error.error?.mensaje || 'Error registrando vehículo',
+            confirmButtonColor: '#dc3545'
+          });
         }
       });
 
@@ -80,20 +97,31 @@ export class App implements OnInit {
       .subscribe({
         next: (response: any) => {
 
-          alert(`
-Placa: ${response.placa}
-Tiempo: ${response.totalMinutos} minutos
-Valor: $${response.valorPagado}
-          `);
+          Swal.fire({
+            icon: 'success',
+            title: 'Salida registrada',
+            html: `
+              <b>Placa:</b> ${response.placa}<br>
+              <b>Tiempo:</b> ${response.totalMinutos} minutos<br>
+              <b>Valor:</b> ${response.valorPagado.toLocaleString('es-CO', {
+                style: 'currency',
+                currency: 'COP'
+              })}
+            `,
+            confirmButtonColor: '#198754'
+          });
 
-          this.obtenerVehiculos();
         },
-
         error: (error) => {
 
           console.error(error);
 
-          alert('Error registrando salida');
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: error.error?.mensaje || 'Error registrando salida',
+            confirmButtonColor: '#dc3545'
+          });
         }
       });
 
