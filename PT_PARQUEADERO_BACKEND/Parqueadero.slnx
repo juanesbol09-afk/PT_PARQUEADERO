@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Parqueadero.API/Parqueadero.API.csproj" />
+  <Project Path="Parqueadero.Aplicacion/Parqueadero.Aplicacion.csproj" />
+  <Project Path="Parqueadero.Dominio/Parqueadero.Dominio.csproj" />
+  <Project Path="Parqueadero.Infrastructura/Parqueadero.Infrastructura.csproj" />
+</Solution>

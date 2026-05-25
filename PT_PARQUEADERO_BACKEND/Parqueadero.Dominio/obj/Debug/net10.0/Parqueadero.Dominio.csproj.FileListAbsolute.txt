@@ -1,0 +1,11 @@
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\bin\Debug\net10.0\Parqueadero.Dominio.deps.json
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\bin\Debug\net10.0\Parqueadero.Dominio.dll
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\bin\Debug\net10.0\Parqueadero.Dominio.pdb
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\obj\Debug\net10.0\Parqueadero.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\obj\Debug\net10.0\Parqueadero.Dominio.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\obj\Debug\net10.0\Parqueadero.Dominio.AssemblyInfo.cs
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\obj\Debug\net10.0\Parqueadero.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\obj\Debug\net10.0\Parqueadero.Dominio.dll
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\obj\Debug\net10.0\refint\Parqueadero.Dominio.dll
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\obj\Debug\net10.0\Parqueadero.Dominio.pdb
+C:\Users\USER\Desktop\PT_PARQUEADERO_BACKEND\Parqueadero.Dominio\obj\Debug\net10.0\ref\Parqueadero.Dominio.dll
