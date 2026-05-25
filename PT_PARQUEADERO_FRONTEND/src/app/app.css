@@ -1,0 +1,41 @@
+.titulo-principal {
+
+  font-size: 4.5rem;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  font-family: 'Montserrat', sans-serif;
+
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.08);
+
+}
+
+.texto-negro {
+
+  color: #000000;
+
+  margin-right: 12px;
+
+}
+
+.texto-parqueadero {
+
+  display: inline-block;
+
+}
+
+.texto-amarillo {
+
+  color: #FFC107;
+
+}
+
+.texto-azul {
+
+  color: #0D1B4C;
+
+}

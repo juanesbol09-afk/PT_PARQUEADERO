@@ -110,6 +110,9 @@ export class App implements OnInit {
             `,
             confirmButtonColor: '#198754'
           });
+          setTimeout(() => {
+            this.obtenerVehiculos();
+          }, 300);
 
         },
         error: (error) => {

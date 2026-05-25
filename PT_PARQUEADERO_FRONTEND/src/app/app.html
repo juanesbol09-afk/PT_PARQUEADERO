@@ -1,7 +1,17 @@
 <div class="container py-5">
 
-  <h1 class="text-center text-primary mb-5">
-    Sistema de Parqueadero
+  <h1 class="titulo-principal text-center mb-5">
+
+    <span class="texto-negro">
+      SISTEMA DE
+    </span>
+
+    <span class="texto-parqueadero">
+
+      <span class="texto-amarillo">PARQUE</span><span class="texto-azul">ADERO</span>
+
+    </span>
+
   </h1>
 
   <div class="card shadow-lg border-0 rounded-4 p-4 mb-5">
@@ -90,7 +100,7 @@
           <td colspan="4" class="text-center py-4">
 
             <h5 class="text-muted">
-              No hay vehículos activos 🚗
+              No hay vehículos activos
             </h5>
 
           </td>
@@ -109,14 +119,14 @@
               class="badge bg-primary"
               *ngIf="vehiculo.tipo === 'Carro'"
             >
-              🚗 Carro
+              Carro
             </span>
 
             <span
               class="badge bg-dark"
               *ngIf="vehiculo.tipo === 'Moto'"
             >
-              🏍️ Moto
+              Moto
             </span>
 
           </td>
