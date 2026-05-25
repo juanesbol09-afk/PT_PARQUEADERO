@@ -6,7 +6,12 @@ import { CommonModule } from '@angular/common';
 
 import { FormsModule } from '@angular/forms';
 
-import { HttpClient } from '@angular/common/http';
+
+import { Vehiculo } from './models/vehiculo.model';
+
+import { ResultadoSalida } from './models/resultado-salida.model';
+
+import { VehiculoService } from './services/vehiculo.service';
 
 @Component({
   selector: 'app-root',
@@ -17,17 +22,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class App implements OnInit {
 
-  apiUrl = 'http://localhost:5188/api/Vehiculo';
-
   placa = '';
 
   tipo = 'Carro';
 
-  vehiculos: any[] = [];
+  vehiculos: Vehiculo[] = [];
 
   loading = false;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private vehiculoService: VehiculoService) {}
 
   ngOnInit(): void {
     this.obtenerVehiculos();
@@ -36,7 +40,7 @@ export class App implements OnInit {
   obtenerVehiculos() {
 
     this.loading = true;
-    this.http.get<any[]>(`${this.apiUrl}/activos`)
+    this.vehiculoService.obtenerActivos()
       .subscribe({
         next: (data) => {
           this.vehiculos = data;
@@ -58,7 +62,7 @@ export class App implements OnInit {
       tipo: this.tipo
     };
 
-    this.http.post(`${this.apiUrl}/ingreso`, body)
+    this.vehiculoService.registrarIngreso(body)
       .subscribe({
         next: () => {
 
@@ -93,7 +97,7 @@ export class App implements OnInit {
 
   registrarSalida(placa: string) {
 
-    this.http.post(`${this.apiUrl}/salida/${placa}`, {})
+    this.vehiculoService.registrarSalida(placa)
       .subscribe({
         next: (response: any) => {
 
