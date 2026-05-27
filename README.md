@@ -11,7 +11,7 @@ Aplicación web desarrollada para la gestión de ingreso y salida de vehículos 
 - TypeScript
 
 ## Backend
-- .NET 9 Web API
+- .NET 10 Web API
 - Entity Framework Core
 - Arquitectura por capas
 - Repository Pattern
